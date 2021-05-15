@@ -50,5 +50,10 @@ $(document).ready(function() {
 
   }
 
+  $("a#app-info-details").on("click", function(evt) {
+    evt.preventDefault();
+    $("div.app-info-details").toggle();
+  });
+
   start_app();
 });
