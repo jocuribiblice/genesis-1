@@ -48,6 +48,14 @@ $(document).ready(function() {
       set_slide(window.item);
     });
 
+    $("a.btn#prev").on("click", function(evt) {
+      evt.preventDefault();
+      window.item -= 1;
+      if (window.item < 0) {
+        window.item = window.verses.length - 1;
+      }
+      set_slide(window.item);
+    });
   }
 
   $("a#app-info-details").on("click", function(evt) {
